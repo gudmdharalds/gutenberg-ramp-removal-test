@@ -1,10 +1,10 @@
 <?php
 
 if ( defined ( 'IS_PRODUCTION') ) {
-	ramp_for_gutenberg_load_gutenberg( array( 'load' => 1 ) ); 
+	add_filter( 'use_block_editor_for_post', '__return_true' ); 
 }
 
 else {
-	wpcom_vip_load_gutenberg( array( 'load' => 0 ) ); 
+	add_filter( 'use_block_editor_for_post', '__return_false' ); 
 }
 
