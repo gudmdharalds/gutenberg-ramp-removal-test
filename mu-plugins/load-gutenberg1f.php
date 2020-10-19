@@ -1,31 +1,27 @@
 <?php
 
 if ( defined ( 'IS_PRODUCTION') ) {
-	gutenberg_ramp_load_gutenberg( [ 'load' => 1 ] ); 
+	add_filter( 'use_block_editor_for_post', '__return_true' ); 
 
-	gutenberg_ramp_load_gutenberg( [ 'load' => 1, ] ); 
+	add_filter( 'use_block_editor_for_post', '__return_true' ); 
 
-	gutenberg_ramp_load_gutenberg( [ 'load' => true ] ); 
+	add_filter( 'use_block_editor_for_post', '__return_true' ); 
 
-	gutenberg_ramp_load_gutenberg( [ 'load' => true, ] ); 
+	add_filter( 'use_block_editor_for_post', '__return_true' ); 
 
-	gutenberg_ramp_load_gutenberg(
-		[ 'load' => true, ]
-	); 
+	add_filter( 'use_block_editor_for_post', '__return_true' ); 
 }
 
 else {
-	gutenberg_ramp_load_gutenberg( [ 'load' => 0 ] ); 
+	add_filter( 'use_block_editor_for_post', '__return_false' ); 
 
-	gutenberg_ramp_load_gutenberg( [ 'load' => 0, ] ); 
+	add_filter( 'use_block_editor_for_post', '__return_false' ); 
 
-	gutenberg_ramp_load_gutenberg( [ 'load' => false ] ); 
+	add_filter( 'use_block_editor_for_post', '__return_false' ); 
 
-	gutenberg_ramp_load_gutenberg( [ 'load' => false, ] ); 
+	add_filter( 'use_block_editor_for_post', '__return_false' ); 
 
-	gutenberg_ramp_load_gutenberg( [
-		'load' => false,
-	] ); 
+	add_filter( 'use_block_editor_for_post', '__return_false' ); 
 
 }
 
